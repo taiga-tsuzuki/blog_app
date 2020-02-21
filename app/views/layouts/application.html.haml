@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title BlogApp
+    %title Blogger
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -11,8 +11,8 @@
   %body
   %header.header
     .header__title
-      = link_to "Our Blog", '#', class: "header__title--text"
+      = link_to "Blogger", root_path, class: "header__title--text"
     .header__right
-      = link_to "新規投稿", '#', class: "header__right--btn"
+      = link_to "新規投稿", new_post_path, class: "header__right--btn"
   .contents
     = yield
